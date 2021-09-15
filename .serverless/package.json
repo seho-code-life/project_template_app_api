@@ -4,6 +4,9 @@
   "description": "",
   "private": true,
   "dependencies": {
+    "@midwayjs/simple-lock": "*",
+    "@midwayjs/serverless-fc-starter": "*",
+    "picomatch": "*",
     "@midwayjs/bootstrap": "^2.3.0",
     "@midwayjs/core": "^2.3.0",
     "@midwayjs/decorator": "^2.13.2",
@@ -57,5 +60,6 @@
     "url": ""
   },
   "author": "anonymous",
-  "license": "MIT"
+  "license": "MIT",
+  "resolutions": {}
 }

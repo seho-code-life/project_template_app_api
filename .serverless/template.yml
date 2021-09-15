@@ -1,0 +1,38 @@
+ROSTemplateFormatVersion: '2015-09-01'
+Transform: Aliyun::Serverless-2018-04-03
+Resources:
+  project-template-app-api:
+    Type: Aliyun::Serverless::Service
+    app_index:
+      Type: Aliyun::Serverless::Function
+      Properties:
+        Initializer: index.initializer
+        Handler: index.handler
+        Runtime: nodejs12
+        CodeUri: .
+        Timeout: 3
+        InitializationTimeout: 10
+        MemorySize: 128
+        InstanceConcurrency: 1
+      Events:
+        http-app_index:
+          Type: HTTP
+          Properties:
+            AuthType: ANONYMOUS
+            Methods:
+              - GET
+              - PUT
+              - POST
+              - DELETE
+              - HEAD
+              - PATCH
+  midway_auto_domain:
+    Type: Aliyun::Serverless::CustomDomain
+    Properties:
+      DomainName: Auto
+      Protocol: HTTP
+      RouteConfig:
+        routes:
+          /*:
+            serviceName: project-template-app-api
+            functionName: app_index

@@ -1,0 +1,16 @@
+{
+  "func": {
+    "listController-add": {
+      "http:/api/list/add": [
+        {
+          "time": 1631659726401,
+          "data": "{\n  \"headers\": {\n    \"Content-Type\": \"text/json\"\n  },\n  \"method\": \"GET\",\n  \"query\": {\n    \"q\": \"test\"\n  },\n  \"path\": \"/api/list/add\",\n  \"body\": {\n    \"name\": \"midway faas\"\n  }\n}"
+        },
+        {
+          "time": 1631659652798,
+          "data": "{\n  \"headers\": {\n    \"Content-Type\": \"text/json\"\n  },\n  \"method\": \"GET\",\n  \"query\": {\n    \"q\": \"test\"\n  },\n  \"path\": \"/api/list/add\",\n  \"body\": {\n    \"name\": \"midway faas\"\n  }\n}"
+        }
+      ]
+    }
+  }
+}
