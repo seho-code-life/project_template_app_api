@@ -15,11 +15,12 @@
   },
   "devDependencies": {
     "@midwayjs/cli": "^1.0.0",
+    "@midwayjs/fcli-plugin-fc": "^1.2.83",
     "@midwayjs/luckyeye": "^1.0.0",
     "@midwayjs/mock": "^2.3.0",
     "@types/jest": "^26.0.10",
     "@types/koa-bodyparser": "^4.3.0",
-    "@types/node": "14",
+    "@types/node": "^14.17.16",
     "cross-env": "^6.0.0",
     "jest": "^26.4.0",
     "mwts": "^1.0.5",

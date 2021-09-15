@@ -6,12 +6,14 @@ import {
   ALL,
   Body,
   Inject,
+  Del,
+  Query,
 } from '@midwayjs/decorator';
 import ListService from '../service/list';
 import { List, AddItem } from '../interface/list';
 
 @Provide()
-@Controller('/api/list')
+@Controller('/v1/list')
 export default class ListController {
   @Inject()
   listService: ListService;
@@ -29,5 +31,9 @@ export default class ListController {
   @Post('/add')
   async add(@Body(ALL) item: AddItem) {
     return await this.listService.add(item);
+  }
+  @Del('/')
+  async del(@Query('id') id: number): Promise<string> {
+    return 'hello';
   }
 }
