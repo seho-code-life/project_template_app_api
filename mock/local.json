@@ -11,6 +11,14 @@
           "data": "{\n  \"headers\": {\n    \"Content-Type\": \"text/json\"\n  },\n  \"method\": \"GET\",\n  \"query\": {\n    \"q\": \"test\"\n  },\n  \"path\": \"/api/list/add\",\n  \"body\": {\n    \"name\": \"midway faas\"\n  }\n}"
         }
       ]
+    },
+    "listController-list": {
+      "http:/v1/list/": [
+        {
+          "time": 1634718890524,
+          "data": "{\n  \"headers\": {\n    \"Content-Type\": \"text/json\"\n  },\n  \"method\": \"GET\",\n  \"query\": {\n    \"q\": \"test\"\n  },\n  \"path\": \"/v1/list/\",\n  \"body\": {\n    \"name\": \"midway faas\"\n  }\n}"
+        }
+      ]
     }
   }
 }
