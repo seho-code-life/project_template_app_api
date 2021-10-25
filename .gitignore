@@ -13,5 +13,4 @@ run/
 *.un~
 .tsbuildinfo
 .tsbuildinfo.*
-src/db/config.ts
 .serverless
