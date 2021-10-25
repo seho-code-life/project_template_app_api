@@ -160,9 +160,9 @@ export const putRow = <T = Record<string, unknown>>(
       TableStore.RowExistenceExpectation.IGNORE,
       null
     ),
-    primaryKey: [{ id: uuidv4() }],
   }
 ): Promise<unknown> => {
+  const id = uuidv4();
   return new Promise((resolve, reject) => {
     // 转换数据成对象数组
     const data = obj2arr(attributeColumns);
@@ -170,6 +170,7 @@ export const putRow = <T = Record<string, unknown>>(
       {
         tableName,
         attributeColumns: data,
+        primaryKey: [{ id }],
         ...options,
       },
       (err, data) => {
@@ -177,7 +178,9 @@ export const putRow = <T = Record<string, unknown>>(
           console.log('error:', err);
           reject(err);
         }
-        resolve(data);
+        resolve({
+          id,
+        });
       }
     );
   });
